@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Crisy Spirals</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .hamburger-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: rgba(255, 255, 255, 0.95);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                box-shadow: none;
+                z-index: 1000;
+                margin: 0;
+                padding: 0;
+            }
+            .menu.menu-active {
+                display: flex;
+            }
+            .menu li {
+                width: 80vw;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            .menu a {
+                display: block;
+                width: 100%;
+                padding: 18px 0;
+                background: linear-gradient(90deg, #d72660 0%, #fbb040 100%);
+                color: #fff;
+                font-weight: bold;
+                font-size: 1.2rem;
+                border-radius: 30px;
+                text-align: center;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+                margin-bottom: 10px;
+                transition: background 0.2s;
+            }
+            .menu a:hover {
+                background: linear-gradient(90deg, #fbb040 0%, #d72660 100%);
+            }
+            .hamburger-btn {
+                display: block;
+                position: absolute;
+                top: 18px;
+                right: 18px;
+            }
+            .nav-bar {
+                position: relative;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-bar">
+            <a href="../index.html" class="logo-link">
+                <img src="../imagenes/logo.png" alt="Crisy Spirals Logo" class="logo">
+            </a>
+            <button id="hamburger-btn" class="hamburger-btn" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="menu" id="main-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="contactos.html">Contacto</a></li>
+                <li><a href="localizacion.html">Localización</a></li>
+            </ul>
+            <button id="modo-oscuro" class="modo-oscuro-btn">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="titulo">CONOCE NUESTROS PRODUCTOS</h1>
+        <div class="centro">
+            <div class="carta2">
+                <p class="descripcion">
+                    En Crisy Spirals, reinventamos la tradición europea del Chimney Cake (Kürtőskalács) con un toque colombiano. 
+                    Nuestros conos horneados en espiral son crujientes por fuera, esponjosos por dentro y se rellenan con ingredientes premium, 
+                    tanto dulces como salados, para adaptarse a todos los gustos. ¡Una explosión de sabor en cada bocado!
+                </p>
+            </div>
+        </div>
+
+        <section class="productos-grid">
+            <article class="producto-card" data-producto="Chimney Cake Clásico">
+                <img src="../imagenes/producto1.jpg" alt="Chimney Cake Clásico" class="producto-imagen">
+                <div class="producto-info">
+                    <h3>Chimney Cake Clásico</h3>
+                    <p>Nuestro Chimney Cake tradicional con azúcar y canela</p>
+                    <span class="precio">$8.000</span>
+                </div>
+            </article>
+
+            <article class="producto-card" data-producto="Explosión de Chocolate">
+                <img src="../imagenes/producto2.jpg" alt="Chimney Cake de Chocolate" class="producto-imagen">
+                <div class="producto-info">
+                    <h3>Explosión de Chocolate</h3>
+                    <p>Relleno de chocolate, nutella y trozos de brownie</p>
+                    <span class="precio">$12.000</span>
+                </div>
+            </article>
+            <article class="producto-card" data-producto="Chimney Salado">
+                <img src="../imagenes/producto4.jpg" alt="Chimney Cake Salado" class="producto-imagen">
+                <div class="producto-info">
+                    <h3>Chimney Salado</h3>
+                    <p>Relleno de pollo, champiñones y queso derretido</p>
+                    <span class="precio">$15.000</span>
+                </div>
+            </article>
+        </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <p class="pietexto">© 2025 Crisy Spirals. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-section">
+                <a href="contactos.html">
+                    <button class="footer-button">Contáctanos</button>
+                </a>
+                <a href="localizacion.html">
+                    <button class="footer-button">Visítanos</button>
+                </a>
+                <a href="nosotros.html">
+                    <button class="footer-button">Quiénes Somos</button>
+                </a>
+            </div>
+            <div class="footer-section contacto">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Calle 11 #4-61 Yumbo, Valle</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <p>+57 324 564 6715</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>info@crisyspirals.com</p>
+                </div>
+            </div>
+            <div class="footer-section redes">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/573245646715" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const menu = document.getElementById('main-menu');
+        const menuLinks = menu.querySelectorAll('a');
+
+        // Alterna el menú al hacer click en el botón
+        hamburgerBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            menu.classList.toggle('menu-active');
+        });
+
+        // Cierra el menú al hacer click en cualquier enlace
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                menu.classList.remove('menu-active');
+            });
+        });
+
+        // Cierra el menú al hacer click fuera de él
+        document.addEventListener('click', function(e) {
+            if (menu.classList.contains('menu-active') && !menu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+                menu.classList.remove('menu-active');
+            }
+        });
+    });
+    </script>
+</body>
+</html>

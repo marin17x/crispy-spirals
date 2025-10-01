@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crispy Spirals - Chimney Cakes Artesanales</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .hamburger-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: rgba(255, 255, 255, 0.95);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                box-shadow: none;
+                z-index: 1000;
+                margin: 0;
+                padding: 0;
+            }
+            .menu.menu-active {
+                display: flex;
+            }
+            .menu li {
+                width: 80vw;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            .menu a {
+                display: block;
+                width: 100%;
+                padding: 18px 0;
+                background: linear-gradient(90deg, #d72660 0%, #fbb040 100%);
+                color: #fff;
+                font-weight: bold;
+                font-size: 1.2rem;
+                border-radius: 30px;
+                text-align: center;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+                margin-bottom: 10px;
+                transition: background 0.2s;
+            }
+            .menu a:hover {
+                background: linear-gradient(90deg, #fbb040 0%, #d72660 100%);
+            }
+            .hamburger-btn {
+                display: block;
+                position: absolute;
+                top: 18px;
+                right: 18px;
+            }
+            .nav-bar {
+                position: relative;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-bar">
+            <div class="nav-left">
+                <a href="index.html" class="logo-link">
+                    <img src="imagenes/logo.png" alt="Crispy Spirals Logo" class="logo">
+                </a>
+            </div>
+            <button id="hamburger-btn" class="hamburger-btn" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="menu" id="main-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="pages/nosotros.html">Nosotros</a></li>
+                <li><a href="pages/productos.html">Productos</a></li>
+                <li><a href="pages/contactos.html">Contacto</a></li>
+                <li><a href="pages/localizacion.html">Localización</a></li>
+            </ul>
+            <button id="modo-oscuro" class="modo-oscuro-btn">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <h1 class="titulo">Bienvenidos a Crispy Spirals</h1>
+        <p class="subtitulo">Donde la tradición europea se encuentra con el sabor colombiano</p>
+    </section>
+
+    <div class="contenido-flex">
+        <img src="imagenes/foto2.jpg" alt="Delicioso Chimney Cake de Crispy Spirals" class="foto2">
+        <div class="carta1">
+            <p class="descripcion">
+                En Crispy Spirals, reinventamos la tradición europea del Chimney Cake (Kürtőskalács) con un toque colombiano. 
+                Nuestros conos horneados en espiral son crujientes por fuera, esponjosos por dentro y se rellenan con ingredientes premium, 
+                tanto dulces como salados, para adaptarse a todos los gustos. ¡Una explosión de sabor en cada bocado!
+            </p>
+        </div>
+    </div>
+
+    <section class="caracteristicas-section">
+        <h2 class="caracteristicas-titulo">¿Por qué elegir Crispy Spirals?</h2>
+        <div class="caracteristicas-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px;">
+            <div class="caracteristica-card">
+                <div class="caracteristica-icon">
+                    <i class="fas fa-fire"></i>
+                </div>
+                <h3 class="caracteristica-titulo">Horneado Fresco</h3>
+                <p class="caracteristica-texto">
+                    Cada chimney cake se hornea al momento, garantizando la textura crujiente perfecta y el aroma irresistible.
+                </p>
+            </div>
+            <div class="caracteristica-card">
+                <div class="caracteristica-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3 class="caracteristica-titulo">Ingredientes Premium</h3>
+                <p class="caracteristica-texto">
+                    Utilizamos solo los mejores ingredientes locales e importados para crear sabores únicos y memorables.
+                </p>
+            </div>
+            <div class="caracteristica-card">
+                <div class="caracteristica-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h3 class="caracteristica-titulo">Variedad Infinita</h3>
+                <p class="caracteristica-texto">
+                    Desde dulces tradicionales hasta creaciones saladas innovadoras, tenemos opciones para todos los paladares.
+                </p>
+            </div>
+            <div class="caracteristica-card">
+                <div class="caracteristica-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h3 class="caracteristica-titulo">100% Artesanal</h3>
+                <p class="caracteristica-texto">
+                    Cada crispy spiral es creado a mano con técnicas tradicionales y el amor por la repostería artesanal.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2 class="cta-titulo">¿Listo para una experiencia única?</h2>
+        <p class="cta-texto">
+            Descubre por qué somos la nueva sensación en repostería artesanal. 
+            Ven y prueba nuestros chimney cakes frescos, hechos con amor y tradición.
+        </p>
+        <div class="cta-buttons">
+            <a href="pages/productos.html" class="cta-button">Ver Nuestros Productos</a>
+            <a href="pages/localizacion.html" class="cta-button">Visítanos Hoy</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <p class="pietexto">© 2025 Crisy Spirals. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-section">
+                <a href="pages/contactos.html">
+                    <button class="footer-button">Contáctanos</button>
+                </a>
+                <a href="pages/localizacion.html">
+                    <button class="footer-button">Visítanos</button>
+                </a>
+                <a href="pages/nosotros.html">
+                    <button class="footer-button">Quienes Somos</button>
+                </a>
+            </div>
+            <div class="footer-section contacto">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Calle 11 #4-61 Yumbo, Valle</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <p>+57 324 564 6715</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>info@crisyspirals.com</p>
+                </div>
+            </div>
+            <div class="footer-section redes">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/crispy_spirals/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/573245646715" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="js/script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const menu = document.getElementById('main-menu');
+    const menuLinks = menu.querySelectorAll('a');
+
+    // Alterna el menú al hacer click en el botón
+    hamburgerBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        menu.classList.toggle('menu-active');
+    });
+
+    // Cierra el menú al hacer click en cualquier enlace
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            menu.classList.remove('menu-active');
+        });
+    });
+
+    // Cierra el menú al hacer click fuera de él
+    document.addEventListener('click', function(e) {
+        if (menu.classList.contains('menu-active') && !menu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+            menu.classList.remove('menu-active');
+        }
+    });
+});
+</script>
+</html>
