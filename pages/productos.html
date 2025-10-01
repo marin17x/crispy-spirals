@@ -199,5 +199,21 @@
         });
     });
     </script>
+     <script src="../js/script.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const productos = document.querySelectorAll('.producto-card[data-producto]');
+        productos.forEach(card => {
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', function() {
+                const nombre = card.getAttribute('data-producto');
+                const mensaje = encodeURIComponent(`¡Hola! Quiero pedir el cono: ${nombre}`);
+                const telefono = '573245646715';
+                const url = `https://wa.me/${telefono}?text=${mensaje}`;
+                window.open(url, '_blank');
+            });
+        });
+    });
+    </script>
 </body>
 </html>
