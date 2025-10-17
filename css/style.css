@@ -825,7 +825,8 @@
     background-color: #232323;
 }
 
-        .modo-oscuro .titulo {
+        .modo-oscuro .titulo,
+        .modo-oscuro .caracteristicas-titulo {
     color: #ffd700;
     background: linear-gradient(45deg, #ffd700, #fffbe6, #d4af37);
     background-size: 200% 200%;
@@ -1124,3 +1125,4 @@
         margin-right: auto;
     }
 }
+
