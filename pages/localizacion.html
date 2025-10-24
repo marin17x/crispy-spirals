@@ -95,13 +95,29 @@
 
     <main>
         <h1 class="titulo">¿Dónde puedes encontrarnos?</h1>
-        <div class="carta2">
+
+        <section class="carta2">
             <p class="descripcion">
-                Estamos ubicados en el corazón de Yumbo, Valle del Cauca. 
-                Ven a visitarnos y disfruta de nuestros deliciosos Chimney Cakes 
-                recién horneados en un ambiente acogedor y familiar.
+                Estamos ubicados en el corazón de Yumbo, Valle del Cauca.
+                Ven a visitarnos y disfruta de nuestros Chimney Cakes recién horneados.
             </p>
-        </div>
+        </section>
+
+        <section class="map-info">
+            <div class="map-card">
+                <h2 class="subtitulo">Nuestra dirección</h2>
+                <p class="direccion">Calle 11 #4-61, Yumbo, Valle del Cauca, Colombia</p>
+                <p class="horario"><strong>Horario:</strong> Lun-Dom 10:00 - 20:00</p>
+                <p class="contacto-rapido"><strong>Teléfono:</strong> <a href="tel:+573245646715">+57 324 564 6715</a></p>
+            </div>
+
+            <div class="map-container">
+                <!-- Usamos un embebido por query para evitar necesidad de API Key -->
+                <iframe class="map-iframe" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps?q=Calle+11+4-61,+Yumbo,+Valle+del+Cauca&output=embed">
+                </iframe>
+            </div>
+        </section>
     </main>
 
     <footer>
