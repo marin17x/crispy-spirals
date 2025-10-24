@@ -1126,3 +1126,73 @@
     }
 }
 
+/* ---- Estilos para Contactos y Formulario ---- */
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 30px auto;
+    align-items: start;
+}
+
+.contact-card {
+    background: linear-gradient(135deg, var(--color-white), #fff7f6);
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 10px 28px rgba(139, 26, 26, 0.08);
+    text-align: center;
+    border: 2px solid rgba(139,26,26,0.06);
+}
+
+.contact-icon {
+    font-size: 36px;
+    color: var(--color-secondary);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: #fff;
+    width: 64px;
+    height: 64px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 12px;
+}
+
+.contact-card h3 {
+    margin: 8px 0;
+    color: var(--color-accent);
+}
+
+.contact-primary {
+    color: var(--color-dark);
+    font-weight: 600;
+}
+
+.contact-actions { margin-top: 12px; display:flex; gap:10px; justify-content:center; }
+
+.contact-form-section { max-width:900px; margin: 30px auto 60px auto; padding: 20px; }
+.contact-form { background: rgba(255,255,255,0.9); padding: 20px; border-radius: 12px; box-shadow: 0 8px 24px rgba(139,26,26,0.06); border: 1px solid rgba(139,26,26,0.05); }
+.contact-form label { display:block; margin-top:10px; margin-bottom:6px; color:var(--color-accent); font-weight:600; }
+.contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea { width:100%; padding:10px 12px; border-radius:8px; border:1px solid #e7cfcf; font-size:1rem; }
+.contact-form textarea { resize:vertical; }
+.form-actions { margin-top:14px; display:flex; gap:12px; align-items:center; }
+.btn { background: linear-gradient(135deg, var(--color-secondary), var(--color-primary)); color: #fff; padding:10px 18px; border-radius:8px; border:none; cursor:pointer; font-weight:700; }
+.btn.small { padding:8px 12px; font-size:0.95rem; }
+.btn.ghost { background:transparent; border:2px solid var(--color-secondary); color:var(--color-dark); }
+.form-note { margin-top:8px; font-size:0.85rem; color:#7a3636; }
+
+/* ---- Estilos para Localización y Mapa ---- */
+.map-info { display:grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width:1200px; margin: 30px auto; align-items:start; }
+.map-card { background: linear-gradient(135deg, var(--color-white), #fff7f6); padding:20px; border-radius:12px; box-shadow:0 8px 24px rgba(139,26,26,0.06); }
+.map-card .direccion { font-weight:700; color:var(--color-accent); margin-bottom:8px; }
+.map-card .horario, .map-card .contacto-rapido { color:var(--color-dark); margin-bottom:6px; }
+.map-container { width:100%; height:100%; }
+.map-iframe { width:100%; height:380px; border:0; border-radius:12px; box-shadow: 0 8px 28px rgba(0,0,0,0.12); }
+
+@media (max-width:900px) {
+    .map-info { grid-template-columns: 1fr; }
+    .map-iframe { height:300px; }
+}
+
+

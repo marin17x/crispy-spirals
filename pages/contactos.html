@@ -95,13 +95,65 @@
 
     <main>
         <h1 class="titulo">Contacto</h1>
-        <div class="carta2">
+
+        <section class="carta2">
             <p class="descripcion">
-                ¿Tienes alguna pregunta o comentario? ¡Nos encantaría escucharte! 
-                Contáctanos a través de nuestros canales de comunicación o visítanos 
-                en nuestra ubicación física.
+                ¿Tienes alguna pregunta o comentario? ¡Nos encantaría escucharte!
+                Usa el formulario para enviar un mensaje directamente a nuestro número, o
+                elige una de las opciones de contacto.
             </p>
-        </div>
+        </section>
+
+        <section class="contacts-grid">
+            <div class="contact-card">
+                <i class="fas fa-phone-alt contact-icon"></i>
+                <h3>Teléfono</h3>
+                <p class="contact-primary">+57 324 564 6715</p>
+                <div class="contact-actions">
+                    <a href="tel:+573245646715" class="btn small">Llamar</a>
+                    <button id="btn-sms" class="btn small">Enviar SMS</button>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <i class="fas fa-envelope contact-icon"></i>
+                <h3>Correo</h3>
+                <p class="contact-primary">info@crisyspirals.com</p>
+                <div class="contact-actions">
+                    <a href="mailto:info@crisyspirals.com" class="btn small">Enviar correo</a>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <i class="fab fa-whatsapp contact-icon"></i>
+                <h3>WhatsApp</h3>
+                <p class="contact-primary">+57 324 564 6715</p>
+                <div class="contact-actions">
+                    <a href="https://wa.me/573245646715" target="_blank" class="btn small">Abrir WhatsApp</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+            <h2 class="subtitulo">Envíanos un mensaje</h2>
+            <form id="contact-form" class="contact-form" aria-label="Formulario de contacto">
+                <input type="hidden" id="target-phone" value="+573245646715">
+                <label for="name">Nombre</label>
+                <input id="name" name="name" type="text" required placeholder="Tu nombre" />
+
+                <label for="email">Correo (opcional)</label>
+                <input id="email" name="email" type="email" placeholder="tu@ejemplo.com" />
+
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Escribe tu mensaje..."></textarea>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn">Enviar por SMS</button>
+                    <button type="button" id="btn-mail-fallback" class="btn ghost">Enviar por correo</button>
+                </div>
+                <p class="form-note">Al enviar, tu app de mensajería se abrirá con el mensaje listo para enviar.</p>
+            </form>
+        </section>
     </main>
 
     <footer>
