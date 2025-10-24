@@ -1138,14 +1138,15 @@
 
 .contact-card {
     background: linear-gradient(135deg, var(--color-white), #fff7f6);
-    border-radius: 16px;
-    padding: 28px;
-    box-shadow: 0 10px 28px rgba(139, 26, 26, 0.08);
+    border-radius: 24px;
+    padding: 35px 28px;
+    box-shadow: 0 10px 30px rgba(139, 26, 26, 0.08);
     text-align: center;
     border: 2px solid rgba(139,26,26,0.06);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     overflow: hidden;
+    backdrop-filter: blur(10px);
 }
 
 .contact-card::before {
@@ -1157,12 +1158,69 @@
     height: 100%;
     background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,182,182,0.3));
     opacity: 0;
+    transition: all 0.4s ease;
+    z-index: 0;
+}
+
+.contact-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+.contact-card h3 {
+    color: var(--color-accent);
+    font-size: 1.5rem;
+    margin: 15px 0;
+    transition: color 0.3s ease;
+}
+
+.contact-primary {
+    color: var(--color-dark);
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.contact-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    opacity: 0.9;
     transition: opacity 0.3s ease;
 }
 
 .contact-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) scale(1.02);
     box-shadow: 0 20px 40px rgba(139, 26, 26, 0.15);
+}
+
+.contact-card:hover h3 {
+    transform: scale(1.05);
+}
+
+.contact-card:hover .contact-primary {
+    transform: scale(1.02);
+}
+
+.contact-card:hover .contact-actions {
+    opacity: 1;
+}
+
+.btn.small {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn.small:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(139, 26, 26, 0.2);
 }
 
 .contact-card:hover::before {
@@ -1171,17 +1229,50 @@
 
 .contact-icon {
     font-size: 36px;
-    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-    color: #fff;
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     position: relative;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.contact-icon::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    background: linear-gradient(135deg, #ff6b6b, #ffd93d);
+    z-index: -1;
+    animation: morphing 8s linear infinite;
+    transition: all 0.4s ease;
+}
+
+@keyframes morphing {
+    0% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+    25% {
+        border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+    }
+    50% {
+        border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+    }
+    75% {
+        border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+    }
+    100% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+}
+
+.contact-icon i {
+    font-size: 2.8rem;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    transition: transform 0.4s ease;
 }
 
 .contact-icon::after {
@@ -1199,11 +1290,29 @@
 }
 
 .contact-card:hover .contact-icon {
+    transform: translateY(-8px);
+}
+
+.contact-card:hover .contact-icon i {
     transform: scale(1.1) rotate(5deg);
 }
 
-.contact-card:hover .contact-icon::after {
-    opacity: 1;
+.contact-card:hover .contact-icon::before {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+/* Estilos específicos para cada icono */
+.contact-card:nth-child(1) .contact-icon::before {
+    background: linear-gradient(135deg, #FF6B6B, #FF8787);
+}
+
+.contact-card:nth-child(2) .contact-icon::before {
+    background: linear-gradient(135deg, #4ECDC4, #45B7AF);
+}
+
+.contact-card:nth-child(3) .contact-icon::before {
+    background: linear-gradient(135deg, #25D366, #128C7E);
 }
 
 .contact-card h3 {
